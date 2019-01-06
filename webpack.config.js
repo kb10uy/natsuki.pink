@@ -1,0 +1,62 @@
+const path = require('path');
+
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const AutoPrefixer = require('autoprefixer');
+
+const publicDirectory = path.resolve(__dirname, 'public');
+
+module.exports = {
+    entry: {
+        main: ['./src/scripts/main.ts', './src/styles/main.scss'],
+    },
+    output: {
+        path: publicDirectory,
+        filename: '[name].js',
+    },
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                exclude: /node_modules/,
+                loader: 'ts-loader',
+            },
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 2,
+                            url: false,
+                        },
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            plugins: [AutoPrefixer()],
+                        },
+                    },
+                    'sass-loader',
+                ],
+            },
+        ],
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+        }),
+        new CopyWebpackPlugin([
+            {
+                from: './assets/images',
+                to: path.resolve(publicDirectory, 'images'),
+            },
+            {
+                from: './assets/pages',
+                to: publicDirectory,
+            },
+        ]),
+    ],
+};
