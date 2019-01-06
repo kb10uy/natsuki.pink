@@ -1,5 +1,9 @@
 @import '~bootstrap/dist/css/bootstrap-reboot';
 
+body {
+    overflow-x: hidden;
+}
+
 .top-cover {
     height: 100vh;
     position: relative;
@@ -25,6 +29,7 @@
 
     h1 {
         grid-column: 1;
+        font-size: 32pt;
     }
 
     img.full-body {
