@@ -1,32 +1,32 @@
 {
-  "name": "natsuki.pink",
-  "version": "1.0.0",
-  "description": "Natsuki's portfolio.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kb10uy/natsuki.pink.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kb10uy/natsuki.pink/issues"
-  },
-  "homepage": "https://github.com/kb10uy/natsuki.pink#readme",
-  "dependencies": {
-    "@types/node": "^10.12.18",
-    "@types/pug": "^2.0.4",
-    "axios": "^0.18.0",
-    "log4js": "^3.0.6",
-    "prettier": "^1.15.3",
-    "pug": "^2.0.3",
-    "ts-node": "^7.0.1",
-    "tslint": "^5.12.0",
-    "tslint-config-prettier": "^1.17.0",
-    "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "^3.2.2"
-  }
+    "name": "natsuki.pink",
+    "version": "1.0.0",
+    "description": "Natsuki's portfolio.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kb10uy/natsuki.pink.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kb10uy/natsuki.pink/issues"
+    },
+    "homepage": "https://github.com/kb10uy/natsuki.pink#readme",
+    "dependencies": {
+        "@types/node": "^10.12.18",
+        "@types/pug": "^2.0.4",
+        "axios": "^0.18.0",
+        "log4js": "^3.0.6",
+        "prettier": "^1.15.3",
+        "pug": "^2.0.3",
+        "ts-node": "^7.0.1",
+        "tslint": "^5.12.0",
+        "tslint-config-prettier": "^1.17.0",
+        "tslint-plugin-prettier": "^2.0.1",
+        "typescript": "^3.2.2"
+    }
 }
