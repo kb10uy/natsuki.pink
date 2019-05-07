@@ -45,9 +45,9 @@ blockquote {
     align-items: center;
     text-align: center;
 
-    grid-template-columns: 1fr max-content;
+    grid-template-columns: max-content 1fr;
     @include sp() {
-        grid-template-rows: 1fr max-content;
+        grid-template-rows: max-content max-content;
     }
 
     &:after {
@@ -65,7 +65,7 @@ blockquote {
     }
 
     .title {
-        grid-column: 1;
+        grid-column: 2;
         @include sp() {
             grid-row: 2;
         }
@@ -105,10 +105,9 @@ blockquote {
     }
 
     img.full-body {
-        grid-column: 2;
         height: 100vh;
+        grid-column: 1;
         @include sp() {
-            grid-column: 1;
             grid-row: 1;
             width: 100%;
             object-fit: contain;
